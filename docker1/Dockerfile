@@ -9,7 +9,7 @@ EXPOSE 8080
 WORKDIR /usr/local/tomcat/webapps
 
 # Copy the WAR file into the webapps directory of Tomcat
-COPY target/PatientAppoinment-0.0.1-SNAPSHOT.war ./ROOT.war
+COPY test/target/PatientAppoinment-0.0.1-SNAPSHOT.war ./ROOT.war
 
 # Start the Tomcat server
 CMD ["catalina.sh", "run"]
