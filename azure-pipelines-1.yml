@@ -20,6 +20,10 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+- script: |
+    echo "Listing files in the artifact staging directory"
+    ls -R $(Build.ArtifactStagingDirectory)
+  displayName: 'List Artifact Staging Directory'
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: test'
   inputs:
